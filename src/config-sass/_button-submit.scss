@@ -1,0 +1,13 @@
+@import './_rem-calc.scss';
+.button-submit {
+  width: 100%;
+  background: var(--primary-color);
+}
+
+.button-submit:hover {
+  background: var(--primary-color-accent);
+}
+
+.button-submit:disabled {
+  background: var(--primary-color-light);
+}
