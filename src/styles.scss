@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import './config-sass/_variables.scss';
+@import './config-sass/_reset.scss';
+@import './config-sass/_rem-calc.scss';
+html {
+  font-family: 'Poppins', sans-serif;
+  background: var(--black);
+}
