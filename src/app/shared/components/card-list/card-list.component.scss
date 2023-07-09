@@ -14,7 +14,7 @@
   border: 0.50px #000204 solid;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 15px;
 
@@ -24,11 +24,15 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      position: relative;
+      cursor: pointer;
 
       .small-box {
           width: 24px;
           height: 24px;
-          border: 1px #E1E1E6 solid;
+          position: absolute;
+          top: 0;
+          right: 0;
       }
 
       .image-container {

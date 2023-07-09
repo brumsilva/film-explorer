@@ -1,57 +1,15 @@
 <section class="container-wrap">
-  <div class="container">
+  <div *ngFor="let filme of movies" class="container">
     <div class="box">
-        <div class="small-box"></div>
-        <div class="image-container">
-            <img class="image" src="https://via.placeholder.com/176x176" />
+        <div class="small-box" (click)="addtoFavoriteList(filme)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
         </div>
-        <div class="title">Filme Exemplo ></div>
-        <div class="description">Descricao do filme aqui.</div>
-        <div class="price">Botao para ver o trailer</div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="box">
-        <div class="small-box"></div>
         <div class="image-container">
-            <img class="image" src="https://via.placeholder.com/176x176" />
+            <img class="image" [src]="filme.poster_path" />
         </div>
-        <div class="title">Filme Exemplo ></div>
-        <div class="description">Descricao do filme aqui.</div>
-        <div class="price">Botao para ver o trailer</div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="box">
-        <div class="small-box"></div>
-        <div class="image-container">
-            <img class="image" src="https://via.placeholder.com/176x176" />
-        </div>
-        <div class="title">Filme Exemplo ></div>
-        <div class="description">Descricao do filme aqui.</div>
-        <div class="price">Botao para ver o trailer</div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="box">
-        <div class="small-box"></div>
-        <div class="image-container">
-            <img class="image" src="https://via.placeholder.com/176x176" />
-        </div>
-        <div class="title">Filme Exemplo ></div>
-        <div class="description">Descricao do filme aqui.</div>
-        <div class="price">Botao para ver o trailer</div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="box">
-        <div class="small-box"></div>
-        <div class="image-container">
-            <img class="image" src="https://via.placeholder.com/176x176" />
-        </div>
-        <div class="title">Filme Exemplo ></div>
-        <div class="description">Descricao do filme aqui.</div>
-        <div class="price">Botao para ver o trailer</div>
+        <div class="title">{{ filme.title }} ></div>
+        <div class="description"> {{ filme.overview }}</div>
+        <div class="price">{{ filme.vote_average }}</div>
     </div>
   </div>
 </section>
