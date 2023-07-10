@@ -10,6 +10,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private readonly toastr: ToastrService) {}
   ngOnInit(): void {
-    this.toastr.success('Bem vindo ao MovieDB, Clique no coraçãom e adicione o filme a sua lista de favoritos.');
+    this.toastr.success('Bem vindo ao Film Explorer, Clique no coração e adicione o filme a sua lista de favoritos.');
   }
 }
