@@ -9,6 +9,10 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   constructor(private readonly router: Router) {}
 
+  goToHome() {
+    this.router.navigate(['/home']);
+  }
+
   goToLogin() {
     localStorage.clear();
     this.router.navigate(['/login']);

@@ -1,6 +1,7 @@
 @import './config-sass/_variables.scss';
 @import './config-sass/_reset.scss';
 @import './config-sass/_rem-calc.scss';
+@import 'ngx-toastr/toastr';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -3,31 +3,18 @@
   height: 100%;
   padding: 24px 123px;
   background: #00111A;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 8px;
   display: inline-flex;
 }
 
 .logo {
-  width: 872px;
+  width: 200px;
   height: 29.51px;
-  padding-right: 686px;
   justify-content: flex-start;
   align-items: center;
   display: flex;
-}
-
-.logo-text {
-  width: 146px;
-  align-self: stretch;
-  position: relative;
-  left: 40px;
-  top: 0px;
-  color: #4D585E;
-  font-size: 24px;
-  font-weight: 700;
-  word-wrap: break-word;
 }
 
 .copyright {
@@ -36,4 +23,26 @@
   font-weight: 400;
   line-height: 22.40px;
   word-wrap: break-word;
+}
+
+//media to mobile phone
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo {
+    width: 200px;
+    height: 29.51px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .logo img {
+    width: 200px;
+    height: 29.51px;
+  }
 }

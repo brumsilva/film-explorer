@@ -16,6 +16,7 @@
   align-items: center;
   gap: 32px;
   display: flex;
+  cursor: pointer;
 }
 
 .logo-text {
@@ -97,5 +98,27 @@
   height: 32px;
   position: relative;
   cursor: pointer;
+}
+
+//media to mobile phone
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .logo {
+    width: 200px;
+    height: 29.51px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .logo img {
+    width: 200px;
+    height: 29.51px;
+  }
 }
 

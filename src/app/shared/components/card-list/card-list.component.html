@@ -8,8 +8,10 @@
             <img class="image" [src]="filme.poster_path" />
         </div>
         <div class="title">{{ filme.title }} ></div>
-        <div class="description"> {{ filme.overview }}</div>
-        <div class="price">{{ filme.vote_average }}</div>
+        <div class="block-with-text">
+          <div class="description"> {{ filme.overview }}</div>
+        </div>
+        <div class="price"> <span>Nota:</span> {{ filme.vote_average }}</div>
     </div>
   </div>
 </section>
