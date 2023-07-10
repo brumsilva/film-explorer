@@ -55,13 +55,18 @@
 
 .orders {
   height: 56px;
-  padding: 12px 32px;
-  background: #750310;
+  padding: 10px 30px;
+  background: var(--primary-color);
   border-radius: 5px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   display: flex;
+  cursor: pointer;
+}
+
+.orders:hover {
+  background: var(--primary-color-accent);
 }
 
 .orders-icon {
@@ -91,13 +96,6 @@
   width: 32px;
   height: 32px;
   position: relative;
+  cursor: pointer;
 }
 
-.profile-border {
-  width: 22px;
-  height: 22px;
-  left: 5px;
-  top: 6px;
-  position: absolute;
-  border: 1px white solid;
-}

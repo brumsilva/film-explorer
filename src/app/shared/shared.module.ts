@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardListComponent } from './components/card-list/card-list.component';
+import { CardListFavoritesComponent } from './components/card-list-favorites/card-list-favorites.component';
 
 
 
@@ -11,6 +12,7 @@ import { CardListComponent } from './components/card-list/card-list.component';
     HeaderComponent,
     FooterComponent,
     CardListComponent,
+    CardListFavoritesComponent,
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { CardListComponent } from './components/card-list/card-list.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    CardListComponent
+    CardListComponent,
+    CardListFavoritesComponent,
   ]
 })
 export class SharedModule { }

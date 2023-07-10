@@ -8,7 +8,7 @@
     </div>
     <div class="search-text">Busque por pratos ou ingredientes</div>
   </div>
-  <div class="orders">
+  <div class="orders" (click)="goToFavorites()">
     <div class="orders-icon">
       <div class="orders-indicator">
         <img src="../../../../assets/icons/heart.svg" style="margin-top: 5px;">
@@ -16,7 +16,7 @@
     </div>
     <div class="orders-text">Lista de Favoritos</div>
   </div>
-  <div class="profile-icon">
+  <div class="profile-icon" (click)="goToLogin()">
       <img src="../../../../assets/icons/log-out.svg">
   </div>
 </div>

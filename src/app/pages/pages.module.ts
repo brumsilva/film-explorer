@@ -1,11 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { RoutingModule } from './routing.module';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { CardListComponent } from '../shared/components/card-list/card-list.component';
+import { RoutingModule } from './routing.module';
+import { AuthInterceptor } from '../auth/auth.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 
@@ -14,11 +17,21 @@ import { CardListComponent } from '../shared/components/card-list/card-list.comp
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    FavoritesComponent,
   ],
   imports: [
     CommonModule,
     RoutingModule,
-    SharedModule
-  ]
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+    }
+  ],
 })
 export class PagesModule { }

@@ -2,18 +2,18 @@
   <div class="logo-container">
     <img class="logo" src="../../../assets/LOGO.png">
   </div>
-  <form class="form-container">
+  <form class="form-container" [formGroup]="loginForm">
     <div class="form-title">Faca o Login</div>
     <div class="form-field">
       <label class="field-label">E-mail</label>
-      <input type="text" placeholder="Exemplo: teste@email.com">
+      <input type="text" placeholder="Exemplo: teste@email.com" formControlName="email">
     </div>
     <div class="form-field">
       <label class="field-label">Senha</label>
-      <input type="password" placeholder="No minimo 4 caracteres">
+      <input type="password" placeholder="No minimo 4 caracteres" formControlName="password">
     </div>
     <div class="button-container">
-      <button class="button-submit">Criar conta</button>
+      <button class="button-submit" (click)="login()">Criar conta</button>
     </div>
 
     <div style="display: flex; justify-content: center;">
